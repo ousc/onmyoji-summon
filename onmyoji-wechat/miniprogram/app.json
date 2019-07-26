@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/main/main"
+  ],
+  "window": {
+    "pageOrientation": "landscape",
+    "navigationStyle": "custom",
+    "disableScroll": true
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

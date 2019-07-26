@@ -1,0 +1,91 @@
+/**index.wxss**/
+.container{
+  background: #000 url("http://ousc.me/wp-content/uploads/2019/06/login_bg.png") no-repeat center center;
+  background-size: auto 100%;
+}
+.userText{
+  position: absolute;
+  left: 7rpx;
+  top: 7rpx;
+}
+.userinfo {
+  position: absolute;
+  bottom: 70rpx;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  margin-bottom: -10rpx;
+
+}
+
+button{
+  border: solid #c2a060 1px;
+width: 200rpx;
+height: 50rpx;
+  background: rgba(255,255,255,0.2)!important;
+  color:#c2a060!important;
+  line-height: 50rpx;
+}
+
+button:focus,button:hover{
+  border: solid #c2a060 1px;
+width: 200rpx;
+height: 50rpx;
+  background: rgba(255,255,255,0.4)!important;
+  color:#FFF!important;
+  line-height: 50rpx;
+}
+
+.userinfo-nickname {
+  color: #FFF;
+  font-size: 14rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  margin-left: 5rpx;
+  vertical-align: middle;
+}
+
+.usermotto {
+  position: absolute;
+  bottom: 30rpx;
+  color: #FFF;
+  font-size: 12rpx;
+  padding: 6rpx 40rpx 6rpx 40rpx;
+  background: linear-gradient(to right, #c2a060, rgba(0,0,0,0));
+}
+
+#loading_bg{
+  background: url(http://ousc.me/wp-content/uploads/2019/07/loading.png) no-repeat;
+  background-position: center center;
+  background-size: 50% auto;
+  animation: rotate 3s linear infinite;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  z-index: 90;
+}
+@keyframes rotate{from{transform: rotate(0deg)}
+    to{transform: rotate(360deg)}
+}
+#loading{
+  background-color: #FFF;
+  font-size: 12px;
+  padding-top: 20px;
+  color: #666;
+  background-image: none;
+  text-shadow: 6px 12px 6px #AAA;
+}
+#tool-text{
+  position: absolute;
+  left: 10px;
+  right: 0;
+  bottom: 10px;
+  margin: 0 auto;
+  color:#FFF;
+  font-size: 15px;
+}

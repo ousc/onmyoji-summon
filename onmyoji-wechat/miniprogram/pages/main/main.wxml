@@ -1,0 +1,111 @@
+<!--miniprogram/pages/main.wxml-->
+<import src="../../img-loader/img-loader.wxml"/>
+<template is="img-loader" data="{{ imgLoadList }}"></template>
+<view class="container" wx:if="{{isLoaded}}">
+  <view class="top-bar">
+    <view style="width:40px;height:40px;positon:absolute;float:left" bindtap="canclechouka"></view>
+    <view style="width:20%;height:40px;positon:absolute;float:left;" bindtap="info"></view>
+    <text class="money">8万</text>
+    <text class="purple-ticket">1903</text>
+    <text class="blue-ticket">{{lanpiaonum}}</text>
+    <text class="white-ticket">5392</text>
+  </view>
+  <view class="chouka-buttons" wx:if="{{ chouka }}"
+ style="background-image: url({{ bottom_image }});">
+    <view id="back" bindtap="canclechouka"></view>
+    <view id="single" bindtap="danchou"></view>
+    <view id="ten" bindtap="shichou"></view>
+  </view>
+
+<view class="bottom-buttons" wx:if="{{ !chouka && !gouyuchou }}">
+    <view class="bottom-button"></view>
+    <view class="bottom-button" bindtap="danchou"></view>
+    <view class="bottom-button" bindtap="gouyuchou"></view>
+    <view class="bottom-button"></view>
+</view> 
+<view id="guihuo"></view>
+<view bindtap="chouqian" class="role" style="background-position-x: {{'-'+positionx + 'px'}}"></view>
+<view wx:if="{{isLoaded && rolepopcaedshow}}" bindtap="hiderolepopcaed" class="popcard" id="rolepopcard">每日一签</view>
+
+  <view id="huafu" wx:if="{{ gouyuchou || chouka }}"></view>
+  <view id="huafu" wx:if="{{ shichou }}" style="background-image:url(http://ousc.me/wp-content/uploads/2019/06/lanpiaos.png);margin-top: 15%;background-size: 120% 70%;margin-left: -7%;width: 70%;height: 100%;"></view>
+
+<ul id="flag" class="{{ gouyuchou?'ticket':'blueticket' }}" wx:if="{{ (danchou || gouyuchou) && !lihuishow }}" style="width: 50%;height: 100%;margin-left: 0;animation-duration: {{ anim }};z-index:-1"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+
+<image wx:if="{{ mask }}" src="{{imagePath}}" style="position: absolute;top: 0;left: 0;width: 100%;height: 80%;animation:wave 1s infinite"/>
+    
+  <canvas 
+  wx:if="{{ (chouka || gouyuchou) && !ing && !lihuishow }}"
+  style="position:absolute;width:100%;height:calc(80% - 25px);left:0;bottom:20%;z-index:5000" 
+  canvas-id='my-canvas' 
+  disable-scroll='{{true}}'
+  bindtouchstart='touchStart' 
+  bindtouchmove='touchMove'
+  bindtouchend="chou">
+</canvas> 
+
+</view>
+<view wx:else id="loading" class="container" style="positon:absolute;left:0;top:0;width:100%;height:100%">
+  <view id="loading_bg"></view>
+  <text>加载图片资源中……({{num}}/{{total}})</text>
+</view>
+
+<view wx:if="isLoaded" style="positon:absolute;left:0;top:0;width:100%;height:100%">
+  <view id="door_left" class="{{ !door?'show':'hide' }}" wx:if="{{ shichou && ing}}" style="background-image:url(http://ousc.me/wp-content/uploads/2019/07/left_door.png);background-repeat:no-repeat;background-size: 50% 100%;z-index:999;width:100%;height:100%;position:absolute;left:0;top:0;"></view>
+
+  <view id="door_right" class="{{ !door?'show':'hide' }}" wx:if="{{ shichou && ing }}" style="background-image:url(http://ousc.me/wp-content/uploads/2019/07/right_door.png);background-repeat:no-repeat;background-size: 50% 100%;z-index:999;width:100%;height:100%;position:absolute;left:0;top:0;"></view>
+
+  <view wx:if="{{ shichou && ing }}" style="background-image:url(http://ousc.me/wp-content/uploads/2019/06/tenchoubg.jpg);background-repeat:no-repeat;background-size: 100% auto;z-index:998;width:100%;height:100%;position:absolute;left:0;top:0;animation:fade-in 3s"></view>
+  <text bindtap="hidelihui" wx:if="{{ lihuishow }}" id="name_txt" style="top:{{ ((6-lihuiname.length)*17/2+60)+'px' }}">{{lihuiname}}</text>
+  <view bindtap="hidelihui" wx:if="{{lihuishow&&level=='SP'}}" class="level" id="level_SP"></view>
+  <view bindtap="hidelihui" wx:if="{{lihuishow&&level=='SSR'}}" class="level" id="level_SSR"></view>
+  <view bindtap="hidelihui" wx:if="{{lihuishow&&level=='SR'}}" class="level" id="level_SR"></view>
+  <view bindtap="hidelihui" wx:if="{{lihuishow&&level=='R'}}" class="level" id="level_R"></view>
+  <view bindtap="hidelihui" wx:if="{{lihuishow}}" class="star" id="star_2"></view>
+  <view bindtap="hidelihui" wx:if="{{lihuishow}}" id="cv">cv:{{lihuicv}}</view>
+  <view bindtap="hidelihui" wx:if="{{lihuishow}}" id="personname"></view>
+  <view bindtap="hidelihui" wx:if="{{ !lihuihide }}" class="{{ lihuishow?'show':'hide' }}" id="choukabg"></view>
+  <view bindtap="hidelihui" wx:if="{{ !lihuihide }}" id="lihui" class="{{ lihuishow?'show':'hide' }}" style="background-image:url({{ 'http://ousc.me/wp-content/uploads/2019/'+date+lihuicode+'.png' }});"></view>
+<view bindtap="hidepopcard" wx:if="{{popcardshow && isLoaded}}" class='popcard' id="settingtitle">
+  概率调整/统计
+</view>
+</view>
+
+<view class='mask' wx:if='{{!hiddenmodalput}}' bindtap='cancel'>
+ <view class='modal-content' nuoxin='height:{{height}}'>
+ <view style="width:100%;color:#FFF;font-size:18px;text-align:center">设置</view>
+  <scroll-view scroll-y class='main-content'>
+   <slot></slot>
+    <view>欢迎使用yys抽卡模拟器1.0</view>
+    <view>您本次迄今为止共计抽卡{{tongji.SP+tongji.SSR+tongji.SR+tongji.R}}张，其中SP{{tongji.SP}}张，SSR{{tongji.SSR}}张，SR{{tongji.SR}}张，R{{tongji.R}}张</view>
+    <view class="section section_gap">
+      <text class="section__title">SP概率</text>
+      <view class="body-view">
+        <slider  activeColor="#734316"  bindchange="spgailv" step="0.001" min="0" max="{{ maxsp }}" value="{{gailvsp}}" show-value/>
+      </view>
+    </view>
+    <view class="section section_gap">
+      <text class="section__title">SR概率</text>
+      <view class="body-view">
+        <slider  activeColor="#734316"  bindchange="srgailv" step="0.001" min="0" max="{{ maxsr }}" value="{{gailvsr}}" show-value/>
+      </view>
+    </view>
+    <view class="section section_gap">
+      <text class="section__title">SSR概率</text>
+      <view class="body-view">
+        <slider  activeColor="#734316"  bindchange="ssrgailv" step="0.001" min="0" max="{{ maxssr }}" value="{{gailvssr}}" show-value/>
+      </view>
+    </view>
+    <view class="section section_gap">
+      <text class="section__title">R概率</text>
+      <view class="body-view">
+        <slider  activeColor="#734316"  bindchange="rgailv" step="0.001" min="0" max="{{ maxr }}" value="{{gailvr}}" show-value/>
+      </view>
+    </view>
+  </scroll-view>
+  <view class='modal-btn-wrapper'>
+   <view class='cancel-btn' nuoxin='color:rgba(7,17,27,0.6)' bindtap='cancel'>返回</view>
+   <view class='confirm-btn' nuoxin='color:#13b5f5' bindtap='confirm'>确认</view>
+  </view>
+ </view>
+</view>

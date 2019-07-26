@@ -1,0 +1,504 @@
+/* miniprogram/pages/main.wxss */
+.container{
+  background: url("http://ousc.me/wp-content/uploads/2019/06/main_bg.jpg") no-repeat center center;
+  background-size: 100% auto;
+}
+.top-bar{
+  background: url(http://ousc.me/wp-content/uploads/2019/06/main_top_bar.png) no-repeat;
+  background-size: 100% auto;
+  width: 100%;
+  height: 100%;
+  color:#FFF;
+  font-size: 12rpx;
+  font-weight: 10;
+  z-index: 2000;
+
+}
+.top-bar text{
+  float: right;
+  line-height: calc(100vw/24);
+}
+.money{
+  margin-right: 18%;
+}
+.purple-ticket{
+  margin-right: 11%;
+}
+.blue-ticket{
+  margin-right: 11%;
+}
+.white-ticket{
+  margin-right: 11%;
+}
+.bottom-buttons{
+  background-image: url(http://ousc.me/wp-content/uploads/2019/06/bottom_buttons.png);
+  background-repeat:  no-repeat;
+  position: absolute;
+  bottom: 0;
+  left:10%;
+  background-size: 100% auto;
+  width: 80%;
+  height: calc(100vw*0.8/5.8963);
+  z-index: 2000
+}
+.bottom-button{
+  height: calc(100vw*0.8/5.8963);
+  width: 25%;
+  display: inline-block;
+}
+#guihuo{
+  background-image: url(http://ousc.me/wp-content/uploads/2019/07/guihuo.png);
+  position: absolute;
+  bottom: 15%;
+  margin: 0 auto;
+  opacity: 0.9;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  width: 30%;
+  height: 25%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  
+}
+.role{
+  z-index: 2001;
+  position: absolute;
+  top: 40%;
+  left: calc(10% - 51px);
+  width: 102px;
+  height: 117px;
+  cursor: pointer;
+  background: url(http://ousc.me/wp-content/uploads/2019/06/shenle.png) 0 0 no-repeat;
+  background-size: 508px 117px;
+}
+
+
+#huafu {
+  position: absolute;
+  top: 10%;
+  width: 50%;
+  height: 80%;
+  background: url(http://ousc.me/wp-content/uploads/2019/06/border.png) no-repeat;
+  background-size: 100% auto;
+}
+
+@keyframes wave {
+    0% {
+        height: 100%;
+        transform: rotateZ(0deg) rotateX(0deg) scale(0.2);
+    }
+    50% {
+        height: 98%;
+        transform: rotateZ(10deg) rotateX(20deg) scale(0.2);
+    }
+    100% {
+        height: 100%;
+        transform: rotateZ(0deg) rotateX(0deg) scale(0.2);
+    }
+}
+.chouka-buttons{
+  background: url("http://ousc.me/wp-content/uploads/2019/06/chouka.png") no-repeat;
+  position: absolute;
+  bottom: 0;
+  left:0;
+  background-size: 100% auto;
+  width: 100%;
+  height: calc(100vw/2);
+}
+
+#back{
+  position: absolute;
+  bottom:3%;
+  width: 10%;
+  height:0;
+  padding-bottom: 10%;
+  left:14%;
+  z-index: 10000;
+}
+#single{
+  position: absolute;
+  bottom: 3%;
+  width: 10%;
+  height: 0;
+  padding-bottom: 8%;
+  left: 32%;
+  z-index: 10000;
+}
+#ten{
+  position: absolute;
+  bottom: 3%;
+  width: 8%;
+  height: 0;
+  padding-bottom: 8%;
+  left: 60%;
+  z-index: 10000;
+}
+
+
+
+
+#flag {
+  position: absolute;
+  left: 20%;
+  top: -6%;
+  animation: flag-reverse ease-in-out infinite;
+}
+
+
+.ticket{
+  left:40%!important;
+}
+.ticket > li {
+  background-image: url(http://ousc.me/wp-content/uploads/2019/06/ticket.png);
+}
+
+.blueticket > li{
+  background-image: url(http://ousc.me/wp-content/uploads/2019/06/lanpiao.png);
+}
+		
+#flag > li {
+  height: 100%;
+  float: left;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  animation: flag ease-in-out infinite;
+}
+ul, li {
+    list-style: none;
+}
+#flag > li:nth-child(53n+0) { animation-delay: -1.9874999999999998s;}#flag > li:nth-child(0) { background-position: -0px 0; }#flag > li:nth-child(53n+1) { animation-delay: -1.95s;}#flag > li:nth-child(1) { background-position: -7.5px 0; }#flag > li:nth-child(53n+2) { animation-delay: -1.9124999999999999s;}#flag > li:nth-child(2) { background-position: -15px 0; }#flag > li:nth-child(53n+3) { animation-delay: -1.875s;}#flag > li:nth-child(3) { background-position: -22.5px 0; }#flag > li:nth-child(53n+4) { animation-delay: -1.8375s;}#flag > li:nth-child(4) { background-position: -30px 0; }#flag > li:nth-child(53n+5) { animation-delay: -1.7999999999999998s;}#flag > li:nth-child(5) { background-position: -37.5px 0; }#flag > li:nth-child(53n+6) { animation-delay: -1.7625s;}#flag > li:nth-child(6) { background-position: -45px 0; }#flag > li:nth-child(53n+7) { animation-delay: -1.7249999999999999s;}#flag > li:nth-child(7) { background-position: -52.5px 0; }#flag > li:nth-child(53n+8) { animation-delay: -1.6875s;}#flag > li:nth-child(8) { background-position: -60px 0; }#flag > li:nth-child(53n+9) { animation-delay: -1.65s;}#flag > li:nth-child(9) { background-position: -67.5px 0; }#flag > li:nth-child(53n+10) { animation-delay: -1.6125s;}#flag > li:nth-child(10) { background-position: -75px 0; }#flag > li:nth-child(53n+11) { animation-delay: -1.575s;}#flag > li:nth-child(11) { background-position: -82.5px 0; }#flag > li:nth-child(53n+12) { animation-delay: -1.5374999999999999s;}#flag > li:nth-child(12) { background-position: -90px 0; }#flag > li:nth-child(53n+13) { animation-delay: -1.5s;}#flag > li:nth-child(13) { background-position: -97.5px 0; }#flag > li:nth-child(53n+14) { animation-delay: -1.4625s;}#flag > li:nth-child(14) { background-position: -105px 0; }#flag > li:nth-child(53n+15) { animation-delay: -1.425s;}#flag > li:nth-child(15) { background-position: -112.5px 0; }#flag > li:nth-child(53n+16) { animation-delay: -1.3875s;}#flag > li:nth-child(16) { background-position: -120px 0; }#flag > li:nth-child(53n+17) { animation-delay: -1.3499999999999999s;}#flag > li:nth-child(17) { background-position: -127.5px 0; }#flag > li:nth-child(53n+18) { animation-delay: -1.3125s;}#flag > li:nth-child(18) { background-position: -135px 0; }#flag > li:nth-child(53n+19) { animation-delay: -1.275s;}#flag > li:nth-child(19) { background-position: -142.5px 0; }#flag > li:nth-child(53n+20) { animation-delay: -1.2375s;}#flag > li:nth-child(20) { background-position: -150px 0; }#flag > li:nth-child(53n+21) { animation-delay: -1.2s;}#flag > li:nth-child(21) { background-position: -157.5px 0; }#flag > li:nth-child(53n+22) { animation-delay: -1.1624999999999999s;}#flag > li:nth-child(22) { background-position: -165px 0; }#flag > li:nth-child(53n+23) { animation-delay: -1.125s;}#flag > li:nth-child(23) { background-position: -172.5px 0; }#flag > li:nth-child(53n+24) { animation-delay: -1.0875s;}#flag > li:nth-child(24) { background-position: -180px 0; }#flag > li:nth-child(53n+25) { animation-delay: -1.05s;}#flag > li:nth-child(25) { background-position: -187.5px 0; }#flag > li:nth-child(53n+26) { animation-delay: -1.0125s;}#flag > li:nth-child(26) { background-position: -195px 0; }#flag > li:nth-child(53n+27) { animation-delay: -0.975s;}#flag > li:nth-child(27) { background-position: -202.5px 0; }#flag > li:nth-child(53n+28) { animation-delay: -0.9375s;}#flag > li:nth-child(28) { background-position: -210px 0; }#flag > li:nth-child(53n+29) { animation-delay: -0.8999999999999999s;}#flag > li:nth-child(29) { background-position: -217.5px 0; }#flag > li:nth-child(53n+30) { animation-delay: -0.8624999999999999s;}#flag > li:nth-child(30) { background-position: -225px 0; }#flag > li:nth-child(53n+31) { animation-delay: -0.825s;}#flag > li:nth-child(31) { background-position: -232.5px 0; }#flag > li:nth-child(53n+32) { animation-delay: -0.7875s;}#flag > li:nth-child(32) { background-position: -240px 0; }#flag > li:nth-child(53n+33) { animation-delay: -0.75s;}#flag > li:nth-child(33) { background-position: -247.5px 0; }#flag > li:nth-child(53n+34) { animation-delay: -0.7125s;}#flag > li:nth-child(34) { background-position: -255px 0; }#flag > li:nth-child(53n+35) { animation-delay: -0.6749999999999999s;}#flag > li:nth-child(35) { background-position: -262.5px 0; }#flag > li:nth-child(53n+36) { animation-delay: -0.6375s;}#flag > li:nth-child(36) { background-position: -270px 0; }#flag > li:nth-child(53n+37) { animation-delay: -0.6s;}#flag > li:nth-child(37) { background-position: -277.5px 0; }#flag > li:nth-child(53n+38) { animation-delay: -0.5625s;}#flag > li:nth-child(38) { background-position: -285px 0; }#flag > li:nth-child(53n+39) { animation-delay: -0.525s;}#flag > li:nth-child(39) { background-position: -292.5px 0; }#flag > li:nth-child(53n+40) { animation-delay: -0.4875s;}#flag > li:nth-child(40) { background-position: -300px 0; }#flag > li:nth-child(53n+41) { animation-delay: -0.44999999999999996s;}#flag > li:nth-child(41) { background-position: -307.5px 0; }#flag > li:nth-child(53n+42) { animation-delay: -0.4125s;}#flag > li:nth-child(42) { background-position: -315px 0; }#flag > li:nth-child(53n+43) { animation-delay: -0.375s;}#flag > li:nth-child(43) { background-position: -322.5px 0; }#flag > li:nth-child(53n+44) { animation-delay: -0.33749999999999997s;}#flag > li:nth-child(44) { background-position: -330px 0; }#flag > li:nth-child(53n+45) { animation-delay: -0.3s;}#flag > li:nth-child(45) { background-position: -337.5px 0; }#flag > li:nth-child(53n+46) { animation-delay: -0.2625s;}#flag > li:nth-child(46) { background-position: -345px 0; }#flag > li:nth-child(53n+47) { animation-delay: -0.22499999999999998s;}#flag > li:nth-child(47) { background-position: -352.5px 0; }#flag > li:nth-child(53n+48) { animation-delay: -0.1875s;}#flag > li:nth-child(48) { background-position: -360px 0; }#flag > li:nth-child(53n+49) { animation-delay: -0.15s;}#flag > li:nth-child(49) { background-position: -367.5px 0; }#flag > li:nth-child(53n+50) { animation-delay: -0.11249999999999999s;}#flag > li:nth-child(50) { background-position: -375px 0; }#flag > li:nth-child(53n+51) { animation-delay: -0.075s;}#flag > li:nth-child(51) { background-position: -382.5px 0; }#flag > li:nth-child(53n+52) { animation-delay: -0.0375s;}#flag > li:nth-child(52) { background-position: -390px 0; }#flag > li:nth-child(53) { background-position: -397.5px 0; }#flag > li:nth-child(54) { background-position: -405px 0; }#flag > li:nth-child(55) { background-position: -412.5px 0; }#flag > li:nth-child(56) { background-position: -420px 0; }#flag > li:nth-child(57) { background-position: -427.5px 0; }#flag > li:nth-child(58) { background-position: -435px 0; }#flag > li:nth-child(59) { background-position: -442.5px 0; }#flag > li:nth-child(60) { background-position: -450px 0; }#flag > li:nth-child(61) { background-position: -457.5px 0; }#flag > li:nth-child(62) { background-position: -465px 0; }#flag > li:nth-child(63) { background-position: -472.5px 0; }#flag > li:nth-child(64) { background-position: -480px 0; }#flag > li:nth-child(65) { background-position: -487.5px 0; }#flag > li:nth-child(66) { background-position: -495px 0; }#flag > li:nth-child(67) { background-position: -502.5px 0; }#flag > li:nth-child(68) { background-position: -510px 0; }#flag > li:nth-child(69) { background-position: -517.5px 0; }#flag > li:nth-child(70) { background-position: -525px 0; }#flag > li:nth-child(71) { background-position: -532.5px 0; }#flag > li:nth-child(72) { background-position: -540px 0; }#flag > li:nth-child(73) { background-position: -547.5px 0; }#flag > li:nth-child(74) { background-position: -555px 0; }#flag > li:nth-child(75) { background-position: -562.5px 0; }#flag > li:nth-child(76) { background-position: -570px 0; }#flag > li:nth-child(77) { background-position: -577.5px 0; }#flag > li:nth-child(78) { background-position: -585px 0; }#flag > li:nth-child(79) { background-position: -592.5px 0; }@keyframes flag {0% { transform: translate3d(0, 20px, 0); }50% { transform: translate3d(0, -20px, 0); }100% { transform: translate3d(0, 20px, 0); }}@keyframes flag-reverse {0% { transform: translate3d(0, -20px, 0); }50% { transform: translate3d(0, 20px, 0); }100% { transform: translate3d(0, -20px, 0); }}#flag {animation-duration: 2s;animation-delay: -1.9874999999999998s;}#flag > li {animation-duration: 2s;width: 7.5px;}
+
+@keyframes fade-in {  
+    0% {opacity: 0;}/*初始状态 透明度为0*/  
+    40% {opacity: 0;}/*过渡状态 透明度为0*/  
+    100% {opacity: 1;}/*结束状态 透明度为1*/  
+}  
+
+#lihui{
+  background-repeat:no-repeat;
+  background-size:auto 100%;
+  z-index:999;
+  width:100%;
+  height:100%;
+  position:absolute;
+  left:0;
+  bottom: 0;
+}
+
+#personname{
+  z-index:1000;
+  background-image: url(http://ousc.me/wp-content/uploads/2019/07/page_z_2a29fde.png);
+  position: absolute;
+  left: calc(50% - 147px);
+  top: 50px;
+  width: 28px;
+  height: 149px;
+  background-repeat: no-repeat;
+  background-position: -538px -229px;
+  background-size: 738.5px auto;
+}
+
+#name_txt {
+  z-index: 1002;
+  position: absolute;
+  font-size: 15px;
+  font-weight: 700;
+  color: #333;
+  line-height: 17px;
+  text-align: center;
+  width: 25px;
+  height: 129px;
+  left: calc(50% - 145px);
+}
+
+.star{
+  z-index: 1004;
+  background-image: url(http://ousc.me/wp-content/uploads/2019/07/star_2.png);
+  position: absolute;
+  width: 15%;
+  height: 100%;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: bottom;
+}
+#cv{
+  height: 20px;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: #EEE;
+  position: absolute;
+  bottom :10px;
+  z-index: 1008;
+  text-shadow: 5px 2px 6px #000;
+
+}
+.level{
+  z-index: 1004;
+  background-image: url(http://ousc.me/wp-content/uploads/2019/07/page_z_2a29fde.png);
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  top: 165px;
+  left: calc(50% - 153px);
+  background-repeat: no-repeat;
+  background-size: 738.5px auto;
+}
+#level_SP{
+  background-position: -646px -351px;
+}
+#level_SSR{
+  background-position: -686px -351px;
+}
+#level_SR{
+  background-position: -606px -351px;
+}
+#level_R{
+  background-position: -623px -442px;
+}
+
+#choukabg{
+  background-image: url(http://ousc.me/wp-content/uploads/2019/07/chouka_bg.png);
+  background-color: rgba(0,0,0,0.7);
+  background-size: auto 70%;
+  z-index:995;
+  width:100%;
+  height:100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+#choukabg.show{
+  animation:show-right .5s forwards;
+}
+#choukabg.hide{
+  visibility:visible;
+  opacity: 1;
+  transform: translateX(calc(50% - 190px));
+  animation:hide-right .5s forwards;
+}
+
+#lihui.show{
+  animation:show-left .5s forwards;
+}
+#lihui.hide{
+  visibility:visible;
+  opacity: 1;
+  transform: translateX(0);
+  animation:hide-left .5s forwards;
+}
+@keyframes show-left{
+  to {
+    visibility:visible;
+    opacity: 1;
+    transform: translateX(calc(50% - 190px))
+  }
+}
+@keyframes hide-left{
+  to {
+    visibility:hidden;
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes show-right{
+  from{
+    transform: translateX(100%);
+  }
+  to {
+    visibility:visible;
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+@keyframes hide-right{
+  to {
+    visibility:hidden;
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+@keyframes rotate{from{transform: rotate(0deg)}
+    to{transform: rotate(360deg)}
+}
+#loading_bg{
+  background: url(http://ousc.me/wp-content/uploads/2019/07/loading.png) no-repeat;
+  background-position: center center;
+  background-size: 50% auto;
+  animation: rotate 3s linear infinite;
+  width: 100%;
+  height:100%;
+  position: absolute;
+  z-index: 90;
+}
+#loading{
+  background-color: #FFF;
+  font-size: 12px;
+  padding-top: 20px;
+  color: #7e5f27;
+  background-image: none;
+  text-shadow: 6px 12px 6px #AAA;
+}
+
+
+#door_left.show{
+  animation:door-left-in 2s forwards;
+}
+#door_left.hide{
+  visibility:visible;
+  opacity: 1;
+  transform: translateX(0);
+  animation:door-left-out 2s forwards;
+}
+@keyframes door-left-in{
+  from{
+    transform: translateX(-50%)
+  }
+  to {
+    visibility:visible;
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
+@keyframes door-left-out{
+  to {
+    visibility:hidden;
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+}
+
+#door_right.show{
+  animation:door-right-in 2s forwards;
+}
+#door_right.hide{
+  visibility:visible;
+  opacity: 1;
+  transform: translateX(50%);
+  animation:door-right-out 2s forwards;
+}
+@keyframes door-right-in{
+  from{
+    transform: translateX(100%)
+  }
+  to {
+    visibility:visible;
+    opacity: 1;
+    transform: translateX(50%)
+  }
+}
+
+@keyframes door-right-out{
+  to {
+    visibility:hidden;
+    opacity: 0;
+    transform: translateX(150%);
+  }
+}
+#settingtitle{
+  position: absolute;
+  left: 50px;
+  top: 40px;
+}
+#rolepopcard{
+  position: absolute;
+  top: calc(40% + 117px);
+  left: calc(10% - 25px);
+}
+.popcard {
+  z-index: 100000000;
+  /* display: none; */
+  width: 100rpx;
+  font-size: 15rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  padding-left: 20rpx;
+  position: relative;
+  color:#a9834a;
+  background-color: #321309;
+  border: 1px solid #734316;
+  border-radius: 5px;
+  padding-top: 8px;
+}
+.popcard:after {
+  content: '';
+  width: 20rpx;
+  height: 20rpx;
+  position: absolute;
+  top: -11rpx;
+  left: 20rpx;
+  transform: rotate(45deg);
+  background-color: #321309;
+  border: 1px solid #734316;
+  border-style: solid none none solid ;
+}
+.section__title{
+  display: inline-block;
+  width: 20%;
+}
+.body-view{
+  display: inline-block;
+  width: 80%;
+  border:none;
+}
+
+
+/* modal */
+.mask{
+ position: absolute;
+ left: 0;
+ right: 0;
+ top: 0;
+ bottom: 0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: rgba(0,0,0,0.4);
+ z-index: 9999;
+ font-size: 14px;
+}
+
+.modal-content{
+  padding:40px;
+ display: flex;
+ flex-direction: column;
+  width: calc(90% - 80px);
+  height: calc(80% - 80px);
+ font-size: 14px;
+ border-radius: 10rpx;
+  color:#a9834a;background-color: #321309;border: 1px solid #734316;
+}
+
+.modal-btn-wrapper{
+ display: flex;
+ flex-direction: row;
+ height: 50rpx;
+ line-height: 50rpx;
+ border-top: 2rpx solid rgba(7,17,27,0.1);
+}
+
+.cancel-btn, .confirm-btn{
+ flex: 1;
+ height: 100rpx;
+ font-size: 15px;
+ line-height: 100rpx;
+ text-align: center;
+}
+
+.cancel-btn{
+ border-right: 2rpx solid rgba(7,17,27,0.1);
+}
+
+.main-content{
+ flex: 1;
+ height: 100%;
+ overflow-y: hidden; 
+}

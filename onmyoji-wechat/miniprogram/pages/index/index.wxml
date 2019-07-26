@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<import src="../../img-loader/img-loader.wxml"/>
+<template is="img-loader" data="{{ imgLoadList }}"></template>
+<view class="container" wx:if="{{isLoaded}}"  style="positon:absolute;left:0;top:0;width:100%;height:100%">
+  <view class="userinfo">
+    <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 登录 </button>
+    <block wx:else> -->
+    <button bindtap="go"> 开始模拟抽卡 </button>
+    <!-- </block> -->
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <text id="tool-text">本工具仅供抽卡概率测试</text>
+  <view class="userText">
+    <text wx:if="{{!hasUserInfo && canIUse}}"></text>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </block>
+  </view>
+</view>
+<view wx:else id="loading" class="container"  style="positon:absolute;left:0;top:0;width:100%;height:100%">
+  <view id="loading_bg"></view>
+  <text>加载中……</text>
+</view>
